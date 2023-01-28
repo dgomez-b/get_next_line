@@ -16,7 +16,7 @@ This is my get_next_line.
 
 ```C
 
-  void	*ft_memcpy(void *dst, const void *src, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t len);
 
 ```
 
@@ -40,7 +40,7 @@ This is my get_next_line.
 
 ```C
 
-  int	ft_strcpy(char *dst, char *src);
+int	ft_strcpy(char *dst, char *src);
 
 ```
 
@@ -64,7 +64,7 @@ This is my get_next_line.
 
 ```C
 
-  char	*ft_strchr(char *s, char c);
+char	*ft_strchr(char *s, char c);
 
 ```
 
@@ -88,7 +88,7 @@ This is my get_next_line.
 
 ```C
 
-  static int	ft_buffprocesor(int fd, char *str);
+static int	ft_buffprocesor(int fd, char *str);
 
 ```
 
@@ -112,7 +112,7 @@ This is my get_next_line.
 
 ```C
 
-  static char	*ft_createstr(int len);
+static char	*ft_createstr(int len);
 
 ```
 
@@ -136,7 +136,7 @@ This is my get_next_line.
 
 ```C
 
-  char	*get_next_line(int fd);
+char	*get_next_line(int fd);
 
 ```
 

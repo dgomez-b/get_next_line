@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dgomez-b <dgomez-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidgomez <davidgomez@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:01:07 by davidgomez        #+#    #+#             */
-/*   Updated: 2023/01/28 19:50:59 by dgomez-b         ###   ########.fr       */
+/*   Updated: 2023/01/29 00:33:54 by davidgomez       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ static int	ft_buffprocesor(int fd, char *str)
 	else
 	{
 		i = read(fd, str, BUFFER_SIZE);
-		str[i] = 0;
+		if (i >= 0)
+			str[i] = 0;
+		else
+			*str = 0;
 	}
 	nl = ft_strchr(str, '\n');
 	if (!nl)
