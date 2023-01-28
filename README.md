@@ -16,7 +16,7 @@ This is my get_next_line.
 
 ```C
 
-void	*ft_memcpy(void *dst, const void *src, size_t len);
+  void	*ft_memcpy(void *dst, const void *src, size_t len);
 
 ```
 
@@ -40,7 +40,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t len);
 
 ```C
 
-int	ft_strcpy(char *dst, char *src);
+  int	ft_strcpy(char *dst, char *src);
 
 ```
 
@@ -64,7 +64,7 @@ int	ft_strcpy(char *dst, char *src);
 
 ```C
 
-char	*ft_strchr(char *s, char c);
+  char	*ft_strchr(char *s, char c);
 
 ```
 
@@ -88,7 +88,7 @@ char	*ft_strchr(char *s, char c);
 
 ```C
 
-int	ft_buffprocesor(int fd, char *str);
+  static int	ft_buffprocesor(int fd, char *str);
 
 ```
 
@@ -106,13 +106,37 @@ int	ft_buffprocesor(int fd, char *str);
 
 <summary>
 
+## **ft_createstr**
+
+</summary>
+
+```C
+
+  static char	*ft_createstr(int len);
+
+```
+
+### Description
+
+  > **ft_createstr()** tries to create a string of the size **len**.
+
+### Return value
+
+> Returns an empty string of size **en** or, on failure, returns 0.
+
+</details>
+
+<details>
+
+<summary>
+
 ## **get_next_line**
 
 </summary>
 
 ```C
 
-char	*get_next_line(int fd);
+  char	*get_next_line(int fd);
 
 ```
 

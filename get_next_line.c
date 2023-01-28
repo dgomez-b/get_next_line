@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidgomez <davidgomez@student.42.fr>      +#+  +:+       +#+        */
+/*   By: dgomez-b <dgomez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:01:07 by davidgomez        #+#    #+#             */
-/*   Updated: 2023/01/27 18:42:56 by davidgomez       ###   ########.fr       */
+/*   Updated: 2023/01/28 19:50:59 by dgomez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 /* ************************************************************************** */
 
-int	ft_buffprocesor(int fd, char *str)
+static int	ft_buffprocesor(int fd, char *str)
 {
 	static char	aux[BUFFER_SIZE + 1];
 	char		*nl;
@@ -40,6 +40,18 @@ int	ft_buffprocesor(int fd, char *str)
 	return (i);
 }
 
+static char	*ft_createstr(int len)
+{
+	char	*str;
+
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	while (len >= 0)
+		str[len--] = 0;
+	return (str);
+}
+
 char	*get_next_line(int fd)
 {
 	static int	i;
@@ -58,9 +70,9 @@ char	*get_next_line(int fd)
 	str = 0;
 	if (!ft_strchr(buff, '\n'))
 		str = get_next_line(fd);
-	if (!str)
-		str = malloc(sizeof(char) * (i + 1));
 	i -= j;
+	if (!str)
+		str = ft_createstr(i + j);
 	if (!str)
 		return (0);
 	ft_memcpy(str + i, buff, j);
