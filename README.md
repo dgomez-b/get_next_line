@@ -1,8 +1,8 @@
 <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" align="right" height="65">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/42_Logo.svg/1200px-42_Logo.svg.png" align="right" height="55">
 
-# Get Next Line
-This is my get_next_line.
+# Get Next Line ( MANDATORY )
+This is my get_next_line. Only mandatory part.
 
 ## Functions
 
