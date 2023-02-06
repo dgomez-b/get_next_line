@@ -82,6 +82,30 @@ char	*ft_strchr(char *s, char c);
 
 <summary>
 
+## **ft_get_aux**
+
+</summary>
+
+```C
+
+char	*ft_get_aux(int fd);
+
+```
+
+### Description
+
+  > **ft_get_aux()** tryes to gets from a list the struct corresponding to the entered fd.
+
+### Return value
+
+> Returns the struct that corresponds to the entered fd or returns **NULL** on falure.
+
+</details>
+
+<details>
+
+<summary>
+
 ## **ft_buffprocesor**
 
 </summary>
@@ -130,6 +154,31 @@ static char	*ft_createstr(int len);
 
 <summary>
 
+## **ft_assembler**
+
+</summary>
+
+```C
+
+char	*ft_assembler(int fd);
+
+```
+
+### Description
+
+  > **ft_assembler()** function attempts read the necesary characters from the file descriptor **fd** and returns them as a new string, saving the characters after the **'\n'** on a list with a struct for each **file descriptor**.
+  <br><br>It doesent check if the **BUFFER_SIZE** is > to 0 and **fd** >= 0;
+
+### Return value
+
+> Returns the next line of the chosen file descriptor as a new string.
+
+</details>
+
+<details>
+
+<summary>
+
 ## **get_next_line**
 
 </summary>
@@ -142,7 +191,7 @@ char	*get_next_line(int fd);
 
 ### Description
 
-  > **get_next_line()** function attempts read the necesary characters from the file descriptor *fd* and returns them as a new string.
+  > **get_next_line()** function attempts read the necesary characters from the file descriptor **fd** and returns them as a new string, saving the characters after the **'\n'** on a list with a struct for each **file descriptor**.
 
 ### Return value
 
