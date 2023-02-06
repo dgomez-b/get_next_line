@@ -6,7 +6,7 @@
 /*   By: davidgomez <davidgomez@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 09:48:52 by davidgomez        #+#    #+#             */
-/*   Updated: 2023/02/06 12:20:30 by davidgomez       ###   ########.fr       */
+/*   Updated: 2023/02/06 12:38:16 by davidgomez       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_buff
+typedef struct s_buff
 {
 	char			str[BUFFER_SIZE + 1];
 	size_t			fd;
