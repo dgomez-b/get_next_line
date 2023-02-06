@@ -6,7 +6,7 @@
 /*   By: davidgomez <davidgomez@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 09:48:49 by davidgomez        #+#    #+#             */
-/*   Updated: 2023/02/06 12:37:51 by davidgomez       ###   ########.fr       */
+/*   Updated: 2023/02/06 13:21:20 by davidgomez       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 /* ************************************************************************** */
 
-static t_buff	*ft_buff_selector(size_t fd)
+static t_buff	*ft_get_aux(size_t fd)
 {
 	static t_buff	*aux = 0;
 	t_buff			*cur;
@@ -83,7 +83,7 @@ static char	*ft_createstr(int len)
 	return (str);
 }
 
-char	*ft_assembler(t_buff *aux, int len)
+static char	*ft_assembler(t_buff *aux, int len)
 {
 	int			j;
 	char		*str;
@@ -113,7 +113,7 @@ char	*get_next_line(int fd)
 {
 	t_buff	*aux;
 
-	aux = ft_buff_selector(fd);
+	aux = ft_get_aux(fd);
 	if (!aux)
 		return (0);
 	return (ft_assembler(aux, 0));
